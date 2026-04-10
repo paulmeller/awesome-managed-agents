@@ -38,7 +38,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BRANCH="update/awesome-list-$(date +%Y-%m-%d)"
+          BRANCH="update/awesome-list-$(date +%Y-%m-%d)-${GITHUB_RUN_ID}"
           git checkout -b "$BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -48,14 +48,14 @@ jobs:
           gh pr create \
             --title "Update awesome list with new resources" \
             --body "$(cat <<'EOF'
-          ## Summary
+## Summary
 
-          This PR was generated automatically by a Claude Managed Agents session
-          using the awesome-list-curator skill to search for, assess, and curate
-          new resources about Claude Managed Agents.
+This PR was generated automatically by a Claude Managed Agents session
+using the awesome-list-curator skill to search for, assess, and curate
+new resources about Claude Managed Agents.
 
-          The agent scores each candidate (A-D) and only adds resources rated A or B.
+The agent scores each candidate (A-D) and only adds resources rated A or B.
 
-          Please review the additions before merging.
-          EOF
-          )"
+Please review the additions before merging.
+EOF
+)"
