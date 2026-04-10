@@ -1,0 +1,61 @@
+name: Update awesome list
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 9am UTC
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run update agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CURATOR_SKILL_ID: ${{ secrets.CURATOR_SKILL_ID }}
+        run: python scripts/update_list.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet README.md && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Create pull request
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="update/awesome-list-$(date +%Y-%m-%d)"
+          git checkout -b "$BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Add new resources found by Managed Agents"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "Update awesome list with new resources" \
+            --body "$(cat <<'EOF'
+          ## Summary
+
+          This PR was generated automatically by a Claude Managed Agents session
+          using the awesome-list-curator skill to search for, assess, and curate
+          new resources about Claude Managed Agents.
+
+          The agent scores each candidate (A-D) and only adds resources rated A or B.
+
+          Please review the additions before merging.
+          EOF
+          )"
