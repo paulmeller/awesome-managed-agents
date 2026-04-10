@@ -114,7 +114,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 
 ## Automated Updates
 
-This list is itself maintained using Claude Managed Agents. A [weekly workflow](.github/workflows/update.yml) spins up a Managed Agents session with a [custom curator skill](skills/awesome-list-curator/SKILL.md) that searches the web for new resources, scores each candidate against quality criteria, and opens a PR with any additions. See [`scripts/`](scripts/) for the implementation.
+This list is itself maintained using Claude Managed Agents. A [weekly workflow](.github/workflows/update-list.yml) spins up a Managed Agents session with a [custom curator skill](skills/awesome-list-curator/SKILL.md) that searches the web for new resources, scores each candidate against quality criteria, and opens a PR with any additions. See [`scripts/`](scripts/) for the implementation.
 
 ## Contributing
 

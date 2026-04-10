@@ -47,15 +47,4 @@ jobs:
           git push -u origin "$BRANCH"
           gh pr create \
             --title "Update awesome list with new resources" \
-            --body "$(cat <<'EOF'
-## Summary
-
-This PR was generated automatically by a Claude Managed Agents session
-using the awesome-list-curator skill to search for, assess, and curate
-new resources about Claude Managed Agents.
-
-The agent scores each candidate (A-D) and only adds resources rated A or B.
-
-Please review the additions before merging.
-EOF
-)"
+            --body "This PR was generated automatically by a Claude Managed Agents session using the awesome-list-curator skill to search for, assess, and curate new resources. The agent scores each candidate (A-D) and only adds resources rated A or B. Please review the additions before merging."
