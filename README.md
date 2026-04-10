@@ -64,6 +64,10 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Which Should You Use?](https://avinashsangle.com/blog/claude-managed-agents) - Decision guide for choosing between Managed Agents and Agent SDK.
 - [Managed Agents vs Agent SDK](https://docs.bswen.com/blog/2026-04-09-claude-managed-agents-vs-agent-sdk/) - Detailed comparison of both approaches.
 - [Agent Platform Comparison](https://docs.bswen.com/blog/2026-04-09-agent-platform-comparison/) - Comparison of Claude Managed Agents, OpenAI, and self-hosted alternatives.
+- [Build Your First Claude Agent in 15 Minutes](https://findskill.ai/blog/build-first-claude-agent-tutorial/) - Step-by-step tutorial with complete Python and TypeScript code walking through agent creation, environment setup, session launch, and event streaming.
+- [Everything You Need to Know](https://www.lowcode.agency/blog/claude-managed-agents) - Comprehensive guide covering architecture, built-in tools, pricing, early adopter case studies, and when to use Managed Agents versus the Messages API or Agent SDK.
+- [Deploy Your First Production Agent in 10 Minutes](https://medium.com/@roeyzalta/claude-managed-agents-deploy-your-first-production-agent-in-10-minutes-8af00f608209) - Hands-on walkthrough with practical code and production examples from Sentry, Rakuten, and Asana.
+- [Claude Managed Agents + Azure: The Multi-Cloud AI Strategy](https://medium.com/@roeyzalta/claude-managed-agents-azure-the-multi-cloud-ai-strategy-nobodys-talking-about-76da68b16877) - Analysis of integrating Managed Agents into Azure-first enterprise stacks, covering multi-cloud architectural patterns from a Microsoft Azure engineering perspective.
 
 ## Community Projects
 
@@ -73,6 +77,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [0xArx/claude-managed-agents-skill](https://github.com/0xArx/claude-managed-agents-skill) - Claude Code skill for building with the Managed Agents API.
 - [Attilio81/MCP_CMA](https://github.com/Attilio81/MCP_CMA) - MCP server exposing Managed Agents docs to Claude Desktop and Claude Code.
 - [contro1-hq/centcom-claude-managed-agents](https://github.com/contro1-hq/centcom-claude-managed-agents) - CENTCOM connector for Claude Managed Agents.
+- [ucsandman/DashClaw](https://github.com/ucsandman/DashClaw) - AI agent observability and governance platform with a real-time dashboard, guard policies, audit trail, and an MCP server for integrating with Claude Managed Agents.
 
 ## Integrations
 
@@ -92,10 +97,14 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Analytics Insight](https://www.analyticsinsight.net/news/anthropic-rolls-out-managed-agents-in-claude-to-simplify-enterprise-ai-deployment) - Simplifying enterprise AI deployment.
 - [The Decoder](https://the-decoder.com/anthropic-launches-managed-infrastructure-for-autonomous-ai-agents/) - Managed infrastructure for autonomous AI agents.
 - [Hacker News Discussion](https://news.ycombinator.com/item?id=47693047) - Community discussion thread from launch day.
+- [WIRED](https://www.wired.com/story/anthropic-launches-claude-managed-agents/) - In-depth launch coverage including demos from Notion and quotes from Anthropic engineering leadership on the infrastructure challenge Managed Agents solves.
 
 ## Videos and Talks
 
-*Know of a video or talk about Claude Managed Agents? [Open a PR!](CONTRIBUTING.md)*
+- [Introducing Claude Managed Agents](https://www.youtube.com/watch?v=I1BvAHOsjBU) - Official product overview of the composable APIs including native MCP, tool integrations, memory, and multi-agent coordination features.
+- [Claude Managed Agents Full Tutorial: How to Setup Your First AI Agent](https://www.youtube.com/watch?v=OU4gE2M45vY) - Hands-on walkthrough building and deploying Claude Managed Agents from scratch, covering sessions, environments, and real-world integrations.
+- [Claude Managed Agents Full Tutorial & Honest Review](https://www.youtube.com/watch?v=Pve75_Zi8oE) - In-depth tutorial and honest review from a developer running 31 scheduled Claude agents, with production insights on costs, patterns, and limitations.
+- [What is Managed Agents?](https://www.youtube.com/watch?v=NLWiIj47IdI) - Concise explainer of the Managed Agents API covering agents, environments, sessions, and how success criteria drive autonomous execution.
 
 ## Related Products
 
