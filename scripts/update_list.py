@@ -56,6 +56,9 @@ def run():
     print(f"Session created: {session.id}")
     print(f"Using skill: {skill_id}")
 
+    # Collect all agent message text and track tool use
+    collected_text = []
+
     with client.beta.sessions.events.stream(session.id) as stream:
         client.beta.sessions.events.send(
             session.id,
@@ -68,10 +71,12 @@ def run():
                             "text": (
                                 "Here is the current README.md for the awesome-managed-agents repo.\n\n"
                                 "Use the awesome-list-curator skill to:\n"
-                                "1. Search for new resources using the search strategy defined in the skill.\n"
-                                "2. Assess each candidate against the skill's criteria and score them.\n"
-                                "3. Write the assessment to /mnt/session/outputs/assessment.json.\n"
-                                "4. Write the updated README.md to /mnt/session/outputs/README.md.\n\n"
+                                "1. Search for new resources using the search strategy.\n"
+                                "2. Assess each candidate against the criteria and score them.\n"
+                                "3. Write the assessment JSON and updated README.md to /mnt/session/outputs/.\n"
+                                "4. After writing the files, print the assessment JSON, then print the "
+                                "exact marker line `===README_START===` followed by the complete updated "
+                                "README.md content, followed by `===README_END===`.\n\n"
                                 "Only add resources rated A or B.\n\n"
                                 "---\n\n"
                                 f"{current_readme}"
@@ -89,47 +94,45 @@ def run():
                 case "agent.message":
                     for block in event.content:
                         if hasattr(block, "text"):
-                            print(f"  {block.text[:200]}")
+                            collected_text.append(block.text)
+                            # Print a preview for progress
+                            preview = block.text[:200].replace("\n", " ")
+                            if preview.strip():
+                                print(f"  {preview}")
                 case "session.status_idle":
                     print("Agent finished.")
                     break
+                case "session.error":
+                    if hasattr(event, "error"):
+                        print(f"Session error: {event.error}", file=sys.stderr)
                 case "session.status_terminated":
                     print("Agent terminated unexpectedly.", file=sys.stderr)
                     sys.exit(1)
 
-    # Download outputs from the session
-    files = client.beta.files.list(scope_id=session.id)
+    # Extract README from agent output using markers
+    full_output = "\n".join(collected_text)
 
-    readme_file = None
-    assessment_file = None
-    for f in files.data:
-        if f.filename == "README.md":
-            readme_file = f
-        elif f.filename == "assessment.json":
-            assessment_file = f
+    start_marker = "===README_START==="
+    end_marker = "===README_END==="
 
-    # Print assessment summary if available
-    if assessment_file:
-        content = client.beta.files.content(assessment_file.id)
-        assessment = json.loads(content.text)
-        print(f"\nAssessment: {assessment['candidates_found']} found, {assessment['candidates_accepted']} accepted")
-        for c in assessment.get("candidates", []):
-            status = "+" if c["rating"] in ("A", "B") else "-"
-            print(f"  [{status}] [{c['rating']}] {c['title']} -> {c['section']}")
-
-    if readme_file is None:
-        print("No README.md found in session outputs. No changes.", file=sys.stderr)
+    if start_marker not in full_output:
+        print("No README markers found in agent output. No changes.", file=sys.stderr)
         sys.exit(0)
 
-    content = client.beta.files.content(readme_file.id)
-    updated_readme = content.text
+    start_idx = full_output.index(start_marker) + len(start_marker)
+    end_idx = full_output.index(end_marker) if end_marker in full_output else len(full_output)
+    updated_readme = full_output[start_idx:end_idx].strip()
+
+    if not updated_readme:
+        print("Empty README extracted. No changes.", file=sys.stderr)
+        sys.exit(0)
 
     if updated_readme.strip() == current_readme.strip():
         print("No new resources found.")
         sys.exit(0)
 
     with open(README_PATH, "w") as f:
-        f.write(updated_readme)
+        f.write(updated_readme + "\n")
 
     print("README.md updated with new resources.")
 
