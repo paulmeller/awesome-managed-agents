@@ -98,6 +98,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [The Decoder](https://the-decoder.com/anthropic-launches-managed-infrastructure-for-autonomous-ai-agents/) - Managed infrastructure for autonomous AI agents.
 - [Hacker News Discussion](https://news.ycombinator.com/item?id=47693047) - Community discussion thread from launch day.
 - [WIRED](https://www.wired.com/story/anthropic-launches-claude-managed-agents/) - In-depth launch coverage including demos from Notion and quotes from Anthropic engineering leadership on the infrastructure challenge Managed Agents solves.
+- [WinBuzzer](https://winbuzzer.com/2026/04/10/anthropic-launches-claude-managed-agents-enterprise-ai-xcxwbn/) - Enterprise-focused analysis covering the OpenClaw ecosystem context, competitive landscape against Amazon Bedrock and Azure AI, and strategic implications of Anthropic's infrastructure push.
 
 ## Videos and Talks
 
@@ -105,6 +106,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents Full Tutorial: How to Setup Your First AI Agent](https://www.youtube.com/watch?v=OU4gE2M45vY) - Hands-on walkthrough building and deploying Claude Managed Agents from scratch, covering sessions, environments, and real-world integrations.
 - [Claude Managed Agents Full Tutorial & Honest Review](https://www.youtube.com/watch?v=Pve75_Zi8oE) - In-depth tutorial and honest review from a developer running 31 scheduled Claude agents, with production insights on costs, patterns, and limitations.
 - [What is Managed Agents?](https://www.youtube.com/watch?v=NLWiIj47IdI) - Concise explainer of the Managed Agents API covering agents, environments, sessions, and how success criteria drive autonomous execution.
+- [How Notion Built with Claude Managed Agents](https://www.youtube.com/watch?v=45hPRdfDEsI) - Notion product manager Eric Liu demonstrates delegating complex work to Claude inside a workspace, showing engineers shipping code and teams building websites and presentations using Managed Agents in production.
 
 ## Related Products
 
