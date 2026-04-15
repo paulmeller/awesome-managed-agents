@@ -68,6 +68,14 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Everything You Need to Know](https://www.lowcode.agency/blog/claude-managed-agents) - Comprehensive guide covering architecture, built-in tools, pricing, early adopter case studies, and when to use Managed Agents versus the Messages API or Agent SDK.
 - [Deploy Your First Production Agent in 10 Minutes](https://medium.com/@roeyzalta/claude-managed-agents-deploy-your-first-production-agent-in-10-minutes-8af00f608209) - Hands-on walkthrough with practical code and production examples from Sentry, Rakuten, and Asana.
 - [Claude Managed Agents + Azure: The Multi-Cloud AI Strategy](https://medium.com/@roeyzalta/claude-managed-agents-azure-the-multi-cloud-ai-strategy-nobodys-talking-about-76da68b16877) - Analysis of integrating Managed Agents into Azure-first enterprise stacks, covering multi-cloud architectural patterns from a Microsoft Azure engineering perspective.
+- [Python Tutorial with Code and OpenAI Comparison](https://pasqualepillitteri.it/en/news/789/claude-managed-agents-python-tutorial-code-openai) - Complete Python walkthrough with four working examples covering ClaudeSDKClient, custom tools with the @tool decorator, OAuth credential vault for Slack, and a technical comparison with the OpenAI Responses API.
+- [Trying Claude Managed Agents for Building Agents at Scale](https://azukiazusa.dev/en/blog/claude-managed-agents/) - Developer walkthrough of the Console UI from agent creation to session launch, including a practical GitHub pull request demo using GitHub MCP server authentication via Vault.
+- [Build a Claude Managed Agent on Vercel](https://vercel.com/kb/guide/claude-managed-agent-vercel) - Official Vercel guide for building an internal knowledge agent with per-user credential vaults, durable SSE polling via Vercel Workflows, and a Next.js chat UI connecting GitHub, Notion, and Slack.
+- [Claude Managed Agents vs Amazon Bedrock AgentCore](https://dev.to/aws-builders/agent-as-a-service-comparing-claude-managed-agents-and-amazon-bedrock-agentcore-22eb) - Side-by-side comparison of both agent-as-a-service platforms covering architecture philosophy, pricing model differences, and a clear decision framework for choosing between them.
+- [I Built a Claude Managed Agent in 30 Minutes](https://aiblewmymind.substack.com/p/claude-managed-agents-explained-demo) - Practical build demo connecting a feedback agent to Notion and a live website, with five enterprise case studies covering Notion, Rakuten, Asana, Sentry, and Vibecode.
+- [Build, Stream, Test: Your First Claude Managed Agent in 30 Minutes](https://medium.com/data-science-collective/build-stream-test-your-first-claude-managed-agent-in-30-minutes-d83fe01b7b45) - Hands-on Python tutorial building a retail competitive price monitor with real-time SSE streaming and output grading using the Outcomes API.
+- [Deep Dive: How Claude Managed Agents Solve the AI Scaffolding Nightmare](https://medium.com/@jiten.p.oswal/deep-dive-how-anthropics-claude-managed-agents-solve-the-ai-scaffolding-nightmare-2e7289c22f06) - Technical analysis of the architecture covering credential isolation via dedicated MCP proxies, durable session context management, and the decoupled sandbox model.
+- [Claude Managed Agents Deep Dive](https://dev.to/bean_bean/claude-managed-agents-deep-dive-anthropics-new-ai-agent-infrastructure-2026-3286) - Comprehensive coverage of architecture, real-world pricing calculations, a Managed Agents vs self-hosted comparison table, and a preview of upcoming features such as private networking and regional deployments.
 
 ## Community Projects
 
@@ -78,6 +86,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Attilio81/MCP_CMA](https://github.com/Attilio81/MCP_CMA) - MCP server exposing Managed Agents docs to Claude Desktop and Claude Code.
 - [contro1-hq/centcom-claude-managed-agents](https://github.com/contro1-hq/centcom-claude-managed-agents) - CENTCOM connector for Claude Managed Agents.
 - [ucsandman/DashClaw](https://github.com/ucsandman/DashClaw) - AI agent observability and governance platform with a real-time dashboard, guard policies, audit trail, and an MCP server for integrating with Claude Managed Agents.
+- [vercel-labs/claude-managed-agents-starter](https://github.com/vercel-labs/claude-managed-agents-starter) - Official Vercel Labs open-source starter template for an internal knowledge agent connecting GitHub, Notion, and Slack via MCP, built with Next.js 16, Better Auth, Neon Postgres, and Vercel Workflows.
 
 ## Integrations
 
@@ -99,6 +108,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Hacker News Discussion](https://news.ycombinator.com/item?id=47693047) - Community discussion thread from launch day.
 - [WIRED](https://www.wired.com/story/anthropic-launches-claude-managed-agents/) - In-depth launch coverage including demos from Notion and quotes from Anthropic engineering leadership on the infrastructure challenge Managed Agents solves.
 - [WinBuzzer](https://winbuzzer.com/2026/04/10/anthropic-launches-claude-managed-agents-enterprise-ai-xcxwbn/) - Enterprise-focused analysis covering the OpenClaw ecosystem context, competitive landscape against Amazon Bedrock and Azure AI, and strategic implications of Anthropic's infrastructure push.
+- [Data Center Knowledge](https://www.datacenterknowledge.com/data-center-software/anthropic-targets-ai-data-center-bottleneck-with-claude-managed-agents) - Industry analysis of how Managed Agents shifts AI workload control to Anthropic's platform, with commentary from Moor Insights and Constellation Research analysts on enterprise lock-in and operational implications.
+- [Mac Observer](https://www.macobserver.com/news/anthropic-expands-claude-cowork-and-launches-managed-agents-for-enterprise-use/) - Coverage of Anthropic's simultaneous Managed Agents public beta launch and Claude Cowork general availability, including new enterprise features such as role-based access controls and expanded OpenTelemetry support.
 
 ## Videos and Talks
 
