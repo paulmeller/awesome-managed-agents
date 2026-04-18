@@ -76,6 +76,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Build, Stream, Test: Your First Claude Managed Agent in 30 Minutes](https://medium.com/data-science-collective/build-stream-test-your-first-claude-managed-agent-in-30-minutes-d83fe01b7b45) - Hands-on Python tutorial building a retail competitive price monitor with real-time SSE streaming and output grading using the Outcomes API.
 - [Deep Dive: How Claude Managed Agents Solve the AI Scaffolding Nightmare](https://medium.com/@jiten.p.oswal/deep-dive-how-anthropics-claude-managed-agents-solve-the-ai-scaffolding-nightmare-2e7289c22f06) - Technical analysis of the architecture covering credential isolation via dedicated MCP proxies, durable session context management, and the decoupled sandbox model.
 - [Claude Managed Agents Deep Dive](https://dev.to/bean_bean/claude-managed-agents-deep-dive-anthropics-new-ai-agent-infrastructure-2026-3286) - Comprehensive coverage of architecture, real-world pricing calculations, a Managed Agents vs self-hosted comparison table, and a preview of upcoming features such as private networking and regional deployments.
+- [Claude Managed Agents Pricing: Costs and Limits (2026)](https://www.verdent.ai/guides/claude-managed-agents-pricing) - Detailed pricing breakdown with worked cost calculations, prompt caching analysis, batch API limitations, and guidance on when Managed Agents is cost-effective versus self-hosted alternatives.
+- [Building a Home Personal Assistant with Claude Managed Agents](https://dev.to/trknhr/building-a-home-personal-assistant-with-claude-managed-agents-5a8f) - Hands-on walkthrough building a Slack-connected household assistant using Managed Agents with Lambda, DynamoDB, and EventBridge Scheduler for async processing and custom memory tools.
 
 ## Community Projects
 
@@ -118,6 +120,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents Full Tutorial & Honest Review](https://www.youtube.com/watch?v=Pve75_Zi8oE) - In-depth tutorial and honest review from a developer running 31 scheduled Claude agents, with production insights on costs, patterns, and limitations.
 - [What is Managed Agents?](https://www.youtube.com/watch?v=NLWiIj47IdI) - Concise explainer of the Managed Agents API covering agents, environments, sessions, and how success criteria drive autonomous execution.
 - [How Notion Built with Claude Managed Agents](https://www.youtube.com/watch?v=45hPRdfDEsI) - Notion product manager Eric Liu demonstrates delegating complex work to Claude inside a workspace, showing engineers shipping code and teams building websites and presentations using Managed Agents in production.
+- [Anthropic drops Claude Managed Agents: here's an explanation and demo of what it actually is](https://www.youtube.com/watch?v=5z1EX77_3po) - Clear explanation and live demo from AI educator Edward Donner clarifying what Managed Agents is, who it is for, and showing a working build with a companion GitHub repository.
+- [Claude Managed Agents Clearly Explained (and why it matters)](https://www.youtube.com/watch?v=nAOyErphp5M) - Interview-style breakdown of the four user personas for Managed Agents, real cost data from a live deployment, and a decision framework for when the platform ROI justifies the spend.
 
 ## Related Products
 
