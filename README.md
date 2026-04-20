@@ -78,6 +78,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents Deep Dive](https://dev.to/bean_bean/claude-managed-agents-deep-dive-anthropics-new-ai-agent-infrastructure-2026-3286) - Comprehensive coverage of architecture, real-world pricing calculations, a Managed Agents vs self-hosted comparison table, and a preview of upcoming features such as private networking and regional deployments.
 - [Claude Managed Agents Pricing: Costs and Limits (2026)](https://www.verdent.ai/guides/claude-managed-agents-pricing) - Detailed pricing breakdown with worked cost calculations, prompt caching analysis, batch API limitations, and guidance on when Managed Agents is cost-effective versus self-hosted alternatives.
 - [Building a Home Personal Assistant with Claude Managed Agents](https://dev.to/trknhr/building-a-home-personal-assistant-with-claude-managed-agents-5a8f) - Hands-on walkthrough building a Slack-connected household assistant using Managed Agents with Lambda, DynamoDB, and EventBridge Scheduler for async processing and custom memory tools.
+- [From Building to Deploying: The Complete Guide to Anthropic's Claude Managed Agents](https://atalupadhyay.wordpress.com/2026/04/11/from-building-to-deploying-the-complete-guide-to-anthropics-claude-managed-agents/) - Complete guide covering the conceptual foundation, decoupled sandbox architecture, open-source trade-offs, and hands-on labs building two agents — a Slack support agent and a long-running deep research pipeline — with production hardening patterns.
 
 ## Community Projects
 
@@ -122,6 +123,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How Notion Built with Claude Managed Agents](https://www.youtube.com/watch?v=45hPRdfDEsI) - Notion product manager Eric Liu demonstrates delegating complex work to Claude inside a workspace, showing engineers shipping code and teams building websites and presentations using Managed Agents in production.
 - [Anthropic drops Claude Managed Agents: here's an explanation and demo of what it actually is](https://www.youtube.com/watch?v=5z1EX77_3po) - Clear explanation and live demo from AI educator Edward Donner clarifying what Managed Agents is, who it is for, and showing a working build with a companion GitHub repository.
 - [Claude Managed Agents Clearly Explained (and why it matters)](https://www.youtube.com/watch?v=nAOyErphp5M) - Interview-style breakdown of the four user personas for Managed Agents, real cost data from a live deployment, and a decision framework for when the platform ROI justifies the spend.
+- [Claude Managed Agents Just Dropped, And It Kills n8n](https://www.youtube.com/watch?v=Ob5Vu-gD3mo) - Practical walkthrough building a transcript-to-ClickUp agent using credential vaults to connect MCP tools without API keys, with a full tour of sessions, the debugging timeline, environments, vaults, analytics, and cost tracking.
 
 ## Related Products
 
