@@ -132,6 +132,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents Just Dropped, And It Kills n8n](https://www.youtube.com/watch?v=Ob5Vu-gD3mo) - Practical walkthrough building a transcript-to-ClickUp agent using credential vaults to connect MCP tools without API keys, with a full tour of sessions, the debugging timeline, environments, vaults, analytics, and cost tracking.
 - [Claude Code's NEW Managed Agents Just Changed EVERYTHING](https://www.youtube.com/watch?v=SSPy3cCSLuc) - Live SaaS build demo showing how Harbor Build, an AI website builder that ships production Astro sites with Stripe checkout, was built on Managed Agents, with a full walkthrough of vault-scoped credentials, custom MCP tools, all 8 built-in tools, and a live universal scraper build.
 - [Claude Managed Agents: Deploy AI Agents That Run for Hours](https://www.youtube.com/watch?v=DpfLbBuhHOg) - Tutorial building a complete Next.js app on Managed Agents covering all four core primitives, the Console, CLI, and SDK, plus how to assign skills, tools, and MCP servers to remote cloud agents.
+- [Claude Managed Agents is AMAZING. Here's How to Build Any Agent in 16 Minutes](https://www.youtube.com/watch?v=n1je-98lvsQ) - Practical walkthrough demonstrating the four core concepts by building a YouTube content planner agent connected to Notion, targeting business users and knowledge workers new to agent development.
 
 ## Related Products
 
