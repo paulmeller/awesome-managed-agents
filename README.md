@@ -96,6 +96,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [ucsandman/DashClaw](https://github.com/ucsandman/DashClaw) - AI agent observability and governance platform with a real-time dashboard, guard policies, audit trail, and an MCP server for integrating with Claude Managed Agents.
 - [vercel-labs/claude-managed-agents-starter](https://github.com/vercel-labs/claude-managed-agents-starter) - Official Vercel Labs open-source starter template for an internal knowledge agent connecting GitHub, Notion, and Slack via MCP, built with Next.js 16, Better Auth, Neon Postgres, and Vercel Workflows.
 - [stainlu/openclaw-managed-agents](https://github.com/stainlu/openclaw-managed-agents) - Self-hostable open alternative implementing the same four-primitive API shape as Claude Managed Agents using OpenClaw, supporting any model provider with pre-warmed container pools, durable sessions, subagent delegation, per-session quotas, and one-command deploy scripts for Hetzner, AWS, and GCP.
+- [agentstep/gateway](https://github.com/agentstep/gateway) - Self-hosted, open-source Anthropic Managed Agents-compatible gateway supporting six agent engines (Claude, Codex, OpenCode, Gemini, Factory, Pi) and eleven sandbox providers. Includes a web UI, CLI, per-session cost tracking, and OpenTelemetry tracing.
 
 ## Integrations
 
