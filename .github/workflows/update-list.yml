@@ -1,50 +1,59 @@
-name: Update awesome list
+name: Start awesome list update
 
 on:
   schedule:
     - cron: "0 9 * * 1" # Every Monday at 9am UTC
   workflow_dispatch:
 
+concurrency:
+  group: curator-check
+
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  update:
+  start:
     runs-on: ubuntu-latest
     steps:
+      - name: Skip if a session is already in progress
+        id: guard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/contents/.github/curator-session.json" --silent >/dev/null 2>&1; then
+            echo "A curator session is already in progress, skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip == 'false'
 
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip == 'false'
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: steps.guard.outputs.skip == 'false'
         run: pip install anthropic
 
-      - name: Run update agent
+      - name: Start update session
+        if: steps.guard.outputs.skip == 'false'
+        id: start
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CURATOR_SKILL_ID: ${{ secrets.CURATOR_SKILL_ID }}
-        run: python scripts/update_list.py
+        run: python scripts/start_update.py
 
-      - name: Check for changes
-        id: diff
+      - name: Record session id on main
+        if: steps.guard.outputs.skip == 'false'
         run: |
-          git diff --quiet README.md && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Create pull request
-        if: steps.diff.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          BRANCH="update/awesome-list-$(date +%Y-%m-%d)-${GITHUB_RUN_ID}"
-          git checkout -b "$BRANCH"
+          mkdir -p .github
+          echo "{\"session_id\": \"${{ steps.start.outputs.session_id }}\"}" > .github/curator-session.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Add new resources found by Managed Agents"
-          git push -u origin "$BRANCH"
-          gh pr create \
-            --title "Update awesome list with new resources" \
-            --body "This PR was generated automatically by a Claude Managed Agents session using the awesome-list-curator skill to search for, assess, and curate new resources. The agent scores each candidate (A-D) and only adds resources rated A or B. Please review the additions before merging."
+          git add .github/curator-session.json
+          git commit -m "Start awesome-list update session ${{ steps.start.outputs.session_id }}"
+          git push

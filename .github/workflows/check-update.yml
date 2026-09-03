@@ -1,0 +1,85 @@
+name: Check awesome list update
+
+on:
+  schedule:
+    - cron: "*/15 * * * *" # Every 15 minutes - cheap no-op unless a session is in progress
+  workflow_dispatch:
+
+concurrency:
+  group: curator-check
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check whether a session is in progress
+        id: guard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/contents/.github/curator-session.json" --silent >/dev/null 2>&1; then
+            echo "in_progress=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "in_progress=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.in_progress == 'true'
+
+      - name: Read session id
+        if: steps.guard.outputs.in_progress == 'true'
+        id: session
+        run: echo "id=$(python3 -c "import json;print(json.load(open('.github/curator-session.json'))['session_id'])")" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.in_progress == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.guard.outputs.in_progress == 'true'
+        run: pip install anthropic
+
+      - name: Poll session status
+        if: steps.guard.outputs.in_progress == 'true'
+        id: poll
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SESSION_ID: ${{ steps.session.outputs.id }}
+        run: python scripts/check_update.py
+
+      - name: Open PR with new resources
+        if: steps.poll.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="update/awesome-list-$(date +%Y-%m-%d)-${GITHUB_RUN_ID}"
+          git checkout -b "$BRANCH"
+          git add README.md
+          git commit -m "Add new resources found by Managed Agents"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "Update awesome list with new resources" \
+            --body "This PR was generated automatically by a Claude Managed Agents session using the awesome-list-curator skill to search for, assess, and curate new resources. The agent scores each candidate (A-D) and only adds resources rated A or B. Please review the additions before merging."
+          git checkout main
+
+      - name: Clear finished session
+        if: steps.poll.outputs.done == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/curator-session.json
+          git commit -m "Clear curator session ${{ steps.session.outputs.id }}"
+          git push origin main
+
+      - name: Flag terminated session
+        if: steps.poll.outputs.failed == 'true'
+        run: |
+          echo "::warning::Curator session ${{ steps.session.outputs.id }} terminated unexpectedly."
+          exit 1
