@@ -90,6 +90,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents for DevOps](https://devtoolhub.com/claude-managed-agents-devops/) - DevOps-focused guide covering incident triage, Kubernetes cost analysis, and PR review agents built on Managed Agents, with practical patterns for scheduling autonomous cloud jobs.
 - [Claude Managed Agents: How to Build a GitHub Repo Review Agent](https://dev.to/jayakumar_ramalingam/claude-managed-agents-how-to-build-a-github-repo-review-agent-23nn) - Practical walkthrough building a GitHub repository review agent that checks out a repo, analyzes source code and documentation, and generates a prioritized Markdown report.
 - [Claude Managed Agents: Self-Hosted Sandboxes and MCP Tunnels Setup Guide](https://dev.to/akaranjkar08/claude-managed-agents-self-hosted-sandboxes-and-mcp-tunnels-setup-guide-4ha4) - Enterprise setup guide for self-hosted sandboxes and MCP tunnels announced at Code with Claude London, covering architecture patterns for regulated industries that need tool execution inside the enterprise perimeter.
+- [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 
 ## Community Projects
 
@@ -109,6 +110,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [modal-labs/claude-managed-agents-modal-sandbox](https://github.com/modal-labs/claude-managed-agents-modal-sandbox) - Official Modal Labs integration using Modal Sandboxes as the self-managed execution environment for Claude Managed Agents, with CLI and Slackbot examples supporting GPU workloads and 100,000+ concurrent sandboxes.
 - [modus-agendi/managed-agent-control-mcp](https://github.com/modus-agendi/managed-agent-control-mcp) - MCP server for starting, observing, and interacting with Claude Managed Agents from any MCP client including Claude.ai and Claude Code, with pluggable authentication and support for stdio, Docker, and AWS Lambda deployments.
 - [aws-samples/sample-lambda-microvm-claude-managed-agents](https://github.com/aws-samples/sample-lambda-microvm-claude-managed-agents) - AWS reference implementation running Claude Managed Agents self-hosted sandbox tool execution inside AWS Lambda MicroVMs, with an event-driven control plane that launches an isolated MicroVM per session while keeping orchestration on Anthropic.
+- [islo-labs/claude-managed-agents](https://github.com/islo-labs/claude-managed-agents) - Self-hosted control plane that runs Claude Managed Agents sessions on hardware-isolated Islo sandboxes, with domain-level egress control, network-layer credential injection, and workspace persistence across idle and resume.
 
 ## Integrations
 
