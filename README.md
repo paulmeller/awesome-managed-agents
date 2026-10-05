@@ -55,6 +55,9 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Memory](https://platform.claude.com/docs/en/managed-agents/memory) - Persistent memory stores that survive across sessions (research preview).
 - [Outcomes](https://platform.claude.com/docs/en/managed-agents/define-outcomes) - Self-evaluation with rubrics and iterative improvement (research preview).
 - [API Reference](https://platform.claude.com/docs/en/api/beta/sessions) - Full API specification for all endpoints.
+- [Self-Hosted Sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes) - Keep orchestration on Anthropic while tool execution runs on your own infrastructure through an environment worker.
+- [Scheduled Deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments) - Run agent sessions on a cron expression and timezone with the Deployments API, including pause, unpause, and manual runs.
+- [Webhooks](https://platform.claude.com/docs/en/managed-agents/webhooks) - Subscribe an HTTPS endpoint to signed session, agent, deployment, and deployment run events instead of polling.
 
 ## Tutorials and Guides
 
@@ -91,6 +94,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents: How to Build a GitHub Repo Review Agent](https://dev.to/jayakumar_ramalingam/claude-managed-agents-how-to-build-a-github-repo-review-agent-23nn) - Practical walkthrough building a GitHub repository review agent that checks out a repo, analyzes source code and documentation, and generates a prioritized Markdown report.
 - [Claude Managed Agents: Self-Hosted Sandboxes and MCP Tunnels Setup Guide](https://dev.to/akaranjkar08/claude-managed-agents-self-hosted-sandboxes-and-mcp-tunnels-setup-guide-4ha4) - Enterprise setup guide for self-hosted sandboxes and MCP tunnels announced at Code with Claude London, covering architecture patterns for regulated industries that need tool execution inside the enterprise perimeter.
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
+- [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 
 ## Community Projects
 
@@ -111,6 +115,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [modus-agendi/managed-agent-control-mcp](https://github.com/modus-agendi/managed-agent-control-mcp) - MCP server for starting, observing, and interacting with Claude Managed Agents from any MCP client including Claude.ai and Claude Code, with pluggable authentication and support for stdio, Docker, and AWS Lambda deployments.
 - [aws-samples/sample-lambda-microvm-claude-managed-agents](https://github.com/aws-samples/sample-lambda-microvm-claude-managed-agents) - AWS reference implementation running Claude Managed Agents self-hosted sandbox tool execution inside AWS Lambda MicroVMs, with an event-driven control plane that launches an isolated MicroVM per session while keeping orchestration on Anthropic.
 - [islo-labs/claude-managed-agents](https://github.com/islo-labs/claude-managed-agents) - Self-hosted control plane that runs Claude Managed Agents sessions on hardware-isolated Islo sandboxes, with domain-level egress control, network-layer credential injection, and workspace persistence across idle and resume.
+- [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
 
 ## Integrations
 
