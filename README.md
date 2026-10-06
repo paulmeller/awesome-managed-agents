@@ -55,6 +55,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Memory](https://platform.claude.com/docs/en/managed-agents/memory) - Persistent memory stores that survive across sessions (research preview).
 - [Outcomes](https://platform.claude.com/docs/en/managed-agents/define-outcomes) - Self-evaluation with rubrics and iterative improvement (research preview).
 - [API Reference](https://platform.claude.com/docs/en/api/beta/sessions) - Full API specification for all endpoints.
+- [Session Budgets](https://platform.claude.com/docs/en/managed-agents/budgets) - Hard spending caps attached when a session is created, plus deployment budgets that are copied onto each run.
+- [Migration](https://platform.claude.com/docs/en/managed-agents/migration) - Map a hand-written Messages API loop or Claude Agent SDK configuration onto Managed Agents, and move between model versions.
 
 ## Tutorials and Guides
 
@@ -111,6 +113,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [modus-agendi/managed-agent-control-mcp](https://github.com/modus-agendi/managed-agent-control-mcp) - MCP server for starting, observing, and interacting with Claude Managed Agents from any MCP client including Claude.ai and Claude Code, with pluggable authentication and support for stdio, Docker, and AWS Lambda deployments.
 - [aws-samples/sample-lambda-microvm-claude-managed-agents](https://github.com/aws-samples/sample-lambda-microvm-claude-managed-agents) - AWS reference implementation running Claude Managed Agents self-hosted sandbox tool execution inside AWS Lambda MicroVMs, with an event-driven control plane that launches an isolated MicroVM per session while keeping orchestration on Anthropic.
 - [islo-labs/claude-managed-agents](https://github.com/islo-labs/claude-managed-agents) - Self-hosted control plane that runs Claude Managed Agents sessions on hardware-isolated Islo sandboxes, with domain-level egress control, network-layer credential injection, and workspace persistence across idle and resume.
+- [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 
 ## Integrations
 
