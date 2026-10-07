@@ -60,6 +60,11 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Webhooks](https://platform.claude.com/docs/en/managed-agents/webhooks) - Subscribe an HTTPS endpoint to signed session, agent, deployment, and deployment run events instead of polling.
 - [Session Budgets](https://platform.claude.com/docs/en/managed-agents/budgets) - Hard spending caps attached when a session is created, plus deployment budgets that are copied onto each run.
 - [Migration](https://platform.claude.com/docs/en/managed-agents/migration) - Map a hand-written Messages API loop or Claude Agent SDK configuration onto Managed Agents, and move between model versions.
+- [Vaults](https://platform.claude.com/docs/en/managed-agents/vaults) - Register an end user's third-party credentials once in a workspace-scoped vault and reference it by ID when creating a session.
+- [Dreams](https://platform.claude.com/docs/en/managed-agents/dreams) - Asynchronous job that reads a memory store and up to 100 past sessions, then writes a new store with duplicates merged and stale entries replaced (research preview).
+- [GitHub](https://platform.claude.com/docs/en/managed-agents/github) - Mount a cached GitHub repository into the session sandbox and connect the GitHub MCP server to open pull requests.
+- [Files](https://platform.claude.com/docs/en/managed-agents/files) - Upload files through the Files API and mount them into a session's sandbox by adding them to its resources.
+- [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
 
 ## Tutorials and Guides
 
@@ -119,6 +124,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [islo-labs/claude-managed-agents](https://github.com/islo-labs/claude-managed-agents) - Self-hosted control plane that runs Claude Managed Agents sessions on hardware-isolated Islo sandboxes, with domain-level egress control, network-layer credential injection, and workspace persistence across idle and resume.
 - [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
+- [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
 
 ## Integrations
 
