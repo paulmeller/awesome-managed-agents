@@ -55,6 +55,16 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Memory](https://platform.claude.com/docs/en/managed-agents/memory) - Persistent memory stores that survive across sessions (research preview).
 - [Outcomes](https://platform.claude.com/docs/en/managed-agents/define-outcomes) - Self-evaluation with rubrics and iterative improvement (research preview).
 - [API Reference](https://platform.claude.com/docs/en/api/beta/sessions) - Full API specification for all endpoints.
+- [Self-Hosted Sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes) - Keep orchestration on Anthropic while tool execution runs on your own infrastructure through an environment worker.
+- [Scheduled Deployments](https://platform.claude.com/docs/en/managed-agents/scheduled-deployments) - Run agent sessions on a cron expression and timezone with the Deployments API, including pause, unpause, and manual runs.
+- [Webhooks](https://platform.claude.com/docs/en/managed-agents/webhooks) - Subscribe an HTTPS endpoint to signed session, agent, deployment, and deployment run events instead of polling.
+- [Session Budgets](https://platform.claude.com/docs/en/managed-agents/budgets) - Hard spending caps attached when a session is created, plus deployment budgets that are copied onto each run.
+- [Migration](https://platform.claude.com/docs/en/managed-agents/migration) - Map a hand-written Messages API loop or Claude Agent SDK configuration onto Managed Agents, and move between model versions.
+- [Vaults](https://platform.claude.com/docs/en/managed-agents/vaults) - Register an end user's third-party credentials once in a workspace-scoped vault and reference it by ID when creating a session.
+- [Dreams](https://platform.claude.com/docs/en/managed-agents/dreams) - Asynchronous job that reads a memory store and up to 100 past sessions, then writes a new store with duplicates merged and stale entries replaced (research preview).
+- [GitHub](https://platform.claude.com/docs/en/managed-agents/github) - Mount a cached GitHub repository into the session sandbox and connect the GitHub MCP server to open pull requests.
+- [Files](https://platform.claude.com/docs/en/managed-agents/files) - Upload files through the Files API and mount them into a session's sandbox by adding them to its resources.
+- [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
 
 ## Tutorials and Guides
 
@@ -91,6 +101,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents: How to Build a GitHub Repo Review Agent](https://dev.to/jayakumar_ramalingam/claude-managed-agents-how-to-build-a-github-repo-review-agent-23nn) - Practical walkthrough building a GitHub repository review agent that checks out a repo, analyzes source code and documentation, and generates a prioritized Markdown report.
 - [Claude Managed Agents: Self-Hosted Sandboxes and MCP Tunnels Setup Guide](https://dev.to/akaranjkar08/claude-managed-agents-self-hosted-sandboxes-and-mcp-tunnels-setup-guide-4ha4) - Enterprise setup guide for self-hosted sandboxes and MCP tunnels announced at Code with Claude London, covering architecture patterns for regulated industries that need tool execution inside the enterprise perimeter.
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
+- [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 
 ## Community Projects
 
@@ -111,6 +122,9 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [modus-agendi/managed-agent-control-mcp](https://github.com/modus-agendi/managed-agent-control-mcp) - MCP server for starting, observing, and interacting with Claude Managed Agents from any MCP client including Claude.ai and Claude Code, with pluggable authentication and support for stdio, Docker, and AWS Lambda deployments.
 - [aws-samples/sample-lambda-microvm-claude-managed-agents](https://github.com/aws-samples/sample-lambda-microvm-claude-managed-agents) - AWS reference implementation running Claude Managed Agents self-hosted sandbox tool execution inside AWS Lambda MicroVMs, with an event-driven control plane that launches an isolated MicroVM per session while keeping orchestration on Anthropic.
 - [islo-labs/claude-managed-agents](https://github.com/islo-labs/claude-managed-agents) - Self-hosted control plane that runs Claude Managed Agents sessions on hardware-isolated Islo sandboxes, with domain-level egress control, network-layer credential injection, and workspace persistence across idle and resume.
+- [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
+- [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
+- [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
 
 ## Integrations
 
