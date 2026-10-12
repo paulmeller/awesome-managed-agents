@@ -65,6 +65,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [GitHub](https://platform.claude.com/docs/en/managed-agents/github) - Mount a cached GitHub repository into the session sandbox and connect the GitHub MCP server to open pull requests.
 - [Files](https://platform.claude.com/docs/en/managed-agents/files) - Upload files through the Files API and mount them into a session's sandbox by adding them to its resources.
 - [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
+- [Workflow Runs](https://platform.claude.com/docs/en/managed-agents/workflow-runs) - Let an agent write a workflow that runs many agents in phases in the background, followed through `workflow_run.*` events, with limits of 64 concurrent threads and 1,000 agents per run (beta).
 
 ## Tutorials and Guides
 
@@ -102,6 +103,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents: Self-Hosted Sandboxes and MCP Tunnels Setup Guide](https://dev.to/akaranjkar08/claude-managed-agents-self-hosted-sandboxes-and-mcp-tunnels-setup-guide-4ha4) - Enterprise setup guide for self-hosted sandboxes and MCP tunnels announced at Code with Claude London, covering architecture patterns for regulated industries that need tool execution inside the enterprise perimeter.
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
+- [Dynamic Workflows Move to the Server](https://vanja.io/managed-agents-dynamic-workflows/) - Walkthrough of the October 2026 dynamic workflows beta covering how a run works, its limits and costs, and a checklist for budgets, tools that are safe to call twice, and stopping runs.
 
 ## Community Projects
 
@@ -125,6 +127,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
+- [CMSMax/claude-managed-agents](https://github.com/CMSMax/claude-managed-agents) - Laravel package that runs Claude Code skills from PHP inside Managed Agents sandboxes, with queued jobs, live progress, spend caps, and downloaded output files.
+- [superduck-ai/open-managed-agents](https://github.com/superduck-ai/open-managed-agents) - Local-first Go service with a React console that serves an Anthropic SDK-compatible `/v1` API for agents, sessions, environments, files, memory stores, skills, deployments, vaults, and webhooks.
 
 ## Integrations
 
@@ -151,6 +155,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [XenoSpectrum — Dynamic Workflows](https://xenospectrum.com/en/claude-managed-agents-dynamic-workflows/) - Coverage of the dynamic workflows public beta, including the gap between 1,000 total agents and 64 concurrent threads and Anthropic's 66-of-70 planted-bug test.
 
 ## Videos and Talks
 
