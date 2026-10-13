@@ -65,6 +65,9 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [GitHub](https://platform.claude.com/docs/en/managed-agents/github) - Mount a cached GitHub repository into the session sandbox and connect the GitHub MCP server to open pull requests.
 - [Files](https://platform.claude.com/docs/en/managed-agents/files) - Upload files through the Files API and mount them into a session's sandbox by adding them to its resources.
 - [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
+- [Event Deltas](https://platform.claude.com/docs/en/managed-agents/event-deltas) - Opt in per stream connection with the `event_deltas[]` query parameter to preview `agent.message` text while the model is still generating it, with the buffered event kept as the authoritative record.
+- [Session Threads](https://platform.claude.com/docs/en/managed-agents/session-threads) - List, interrupt, and archive the threads of a multiagent session, read their events, and handle tool permissions across them, with at most 25 child threads at a time.
+- [Inspect Sessions and Track Usage](https://platform.claude.com/docs/en/managed-agents/session-observability) - Inspect a session in the Console session viewer and read its `usage` totals, including `list_cost` and `active_seconds`, to debug unexpected agent behavior.
 
 ## Tutorials and Guides
 
@@ -125,6 +128,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
+- [render-examples/render-managed-agents-sandbox](https://github.com/render-examples/render-managed-agents-sandbox) - Render example whose orchestrator claims sessions from a self-hosted environment and runs each one in a fresh Render Sandbox, in TypeScript and Python versions with Deploy to Render Blueprints.
 
 ## Integrations
 
