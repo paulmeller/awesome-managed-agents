@@ -65,6 +65,9 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [GitHub](https://platform.claude.com/docs/en/managed-agents/github) - Mount a cached GitHub repository into the session sandbox and connect the GitHub MCP server to open pull requests.
 - [Files](https://platform.claude.com/docs/en/managed-agents/files) - Upload files through the Files API and mount them into a session's sandbox by adding them to its resources.
 - [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
+- [Secure Your Deployment](https://platform.claude.com/docs/en/managed-agents/secure-deployment) - Settings that limit what an agent can reach and do, most important first, from choosing a cloud or self-hosted sandbox and limiting the network to vault credentials, approvals, the smallest tool set, and spending limits.
+- [Build in Console](https://platform.claude.com/docs/en/managed-agents/onboarding) - Create and test agents visually in Console with an inline session runner, then copy the equivalent API request and the agent and environment IDs into your code.
+- [Reference](https://platform.claude.com/docs/en/managed-agents/reference) - One page of event types, self-hosted worker CLI flags, supported MCP server types, rate limits, and branding guidelines.
 
 ## Tutorials and Guides
 
@@ -102,6 +105,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents: Self-Hosted Sandboxes and MCP Tunnels Setup Guide](https://dev.to/akaranjkar08/claude-managed-agents-self-hosted-sandboxes-and-mcp-tunnels-setup-guide-4ha4) - Enterprise setup guide for self-hosted sandboxes and MCP tunnels announced at Code with Claude London, covering architecture patterns for regulated industries that need tool execution inside the enterprise perimeter.
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
+- [Run Claude Managed Agents on Daytona](https://www.daytona.io/docs/en/guides/claude/claude-managed-agents/) - Daytona guide to running each session in its own Daytona sandbox as a self-hosted environment, with polling and webhook orchestrators and a reference implementation in the daytona/guides repo.
 
 ## Community Projects
 
@@ -125,12 +129,16 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
+- [davila7/claude-managed-agents-cookbook](https://github.com/davila7/claude-managed-agents-cookbook) - Jupyter notebooks that call the real API, from a hello-world through multi-turn sessions, custom tools and permissions, files, session control, subagents, and dynamic workflows, each with a matching `ant` CLI version.
+- [blaxel-ai/cma-blaxel-sandbox](https://github.com/blaxel-ai/cma-blaxel-sandbox) - Cookbook that runs Managed Agents tool execution in one isolated Blaxel sandbox per session, with an SDK worker, a webhook orchestrator, a $1.00 default session budget, multi-turn sessions, and an AG-UI example.
+- [jonasz-lasut/provider-anthropic](https://github.com/jonasz-lasut/provider-anthropic) - Crossplane provider that manages agents, sessions, deployments, vaults, environments, memory stores, dreams, and skills as Crossplane managed resources through the Managed Agents beta API.
 
 ## Integrations
 
 - [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/agents/providers/anthropic) - Anthropic provider for the Microsoft agent framework.
 - [Promptfoo](https://www.promptfoo.dev/docs/providers/claude-agent-sdk/) - Evaluation and testing provider for Claude agents.
 - [Composio](https://composio.dev/content/claude-agents-sdk-vs-openai-agents-sdk-vs-google-adk) - Framework comparison and integration support across agent platforms.
+- [Arcjet](https://docs.arcjet.com/guards/claude-managed-agents/) - JavaScript and Python guard adapter that screens inbound `user.message` text for prompt injection and gates custom tools on `agent.custom_tool_use` with rate limits and PII detection, failing closed by default.
 
 ## Articles and Press
 
