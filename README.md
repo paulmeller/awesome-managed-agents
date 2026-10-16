@@ -65,6 +65,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [GitHub](https://platform.claude.com/docs/en/managed-agents/github) - Mount a cached GitHub repository into the session sandbox and connect the GitHub MCP server to open pull requests.
 - [Files](https://platform.claude.com/docs/en/managed-agents/files) - Upload files through the Files API and mount them into a session's sandbox by adding them to its resources.
 - [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
+- [Choosing an Environment](https://platform.claude.com/docs/en/managed-agents/choosing-an-environment) - Decide whether tools and code run in an Anthropic-managed cloud environment or a self-hosted sandbox, and see what changes if you switch.
+- [Session Operations](https://platform.claude.com/docs/en/managed-agents/session-operations) - Retrieve, list, update, archive, and delete sessions, including changing the agent configuration and session budget on an existing session.
 
 ## Tutorials and Guides
 
