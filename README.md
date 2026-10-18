@@ -67,6 +67,16 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Web Domain Restrictions](https://platform.claude.com/docs/en/managed-agents/tools-web-restrictions) - Set `allowed_domains` or `blocked_domains` on the `web_search` and `web_fetch` tools, cap fetched content, and localize search results.
 - [Choosing an Environment](https://platform.claude.com/docs/en/managed-agents/choosing-an-environment) - Decide whether tools and code run in an Anthropic-managed cloud environment or a self-hosted sandbox, and see what changes if you switch.
 - [Session Operations](https://platform.claude.com/docs/en/managed-agents/session-operations) - Retrieve, list, update, archive, and delete sessions, including changing the agent configuration and session budget on an existing session.
+- [Deploy Self-Hosted Workers](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-workers) - Choose how self-hosted sandbox workers claim work and where sessions run, always-on or webhook-triggered, in one process or one sandbox per session.
+- [Custom Tools in Self-Hosted Sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-custom-tools) - Serve custom tools from a self-hosted sandbox worker, and wrap an MCP server inside your network as custom tools without running a tunnel.
+- [Memory Stores in Self-Hosted Sandboxes](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-memory) - Attach up to 8 memory stores to a session on a self-hosted environment, where your worker downloads each store into the sandbox and syncs the agent's changes back.
+- [Monitor and Troubleshoot Self-Hosted Workers](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-operations) - Read queue depth, stop sessions and workers without losing work, and fix common self-hosted sandbox failures.
+- [Self-Hosted Worker Reference](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-reference) - Reference for self-hosted sandbox workers covering `ant` CLI flags, environment variables, host requirements, filesystem paths, and SDK helper options.
+- [Self-Hosted Security Model](https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes-security) - Shared responsibility model for self-hosted sandboxes, where you own sandbox image hardening, network egress controls, and storage and rotation of the environment service key.
+- [Review and Monitor Agent Sessions](https://platform.claude.com/docs/en/managed-agents/secure-deployment-monitoring) - Optionally review each session's events with an offline job, watch webhooks for sessions that need attention, and see what Managed Agents keeps and for how long.
+- [Security Risks and Sandbox Boundaries](https://platform.claude.com/docs/en/managed-agents/secure-deployment-risks) - Why an agent's settings matter for security, and what the Managed Agents sandbox can and cannot do.
+- [OpenTelemetry](https://platform.claude.com/docs/en/manage-claude/opentelemetry) - Beta OpenTelemetry export that traces Managed Agents sessions with a span for each Sessions API request and a turn span for each agent turn, set up from the Claude SDK or a Console destination.
+- [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws#claude-managed-agents) - Managed Agents on Claude Platform on AWS, including scheduled deployments, vaults, memory stores, and self-hosted sandboxes, and how sessions there differ, such as reauthenticating after 6 hours of autonomous running.
 
 ## Tutorials and Guides
 
@@ -104,6 +114,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents: Self-Hosted Sandboxes and MCP Tunnels Setup Guide](https://dev.to/akaranjkar08/claude-managed-agents-self-hosted-sandboxes-and-mcp-tunnels-setup-guide-4ha4) - Enterprise setup guide for self-hosted sandboxes and MCP tunnels announced at Code with Claude London, covering architecture patterns for regulated industries that need tool execution inside the enterprise perimeter.
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
+- [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
 
 ## Community Projects
 
@@ -127,12 +138,14 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [sandbaseai/sandbase-harness](https://github.com/sandbaseai/sandbase-harness) - Apache-2.0, local-first agent runtime with a Claude Managed Agents-style `/v1` API, Docker and Kubernetes sandboxes, credential vaults, audit and replay, and a local Console for any model provider.
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
+- [anthropics/claude-quickstarts Managed Agents](https://github.com/anthropics/claude-quickstarts/tree/main/managed-agents) - Official runnable apps that pair Managed Agents with real product surfaces, including assistant-ui, Chat SDK, CopilotKit over AG-UI, Slack, Linear, Sentry, and self-hosted sandboxes.
 
 ## Integrations
 
 - [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/agents/providers/anthropic) - Anthropic provider for the Microsoft agent framework.
 - [Promptfoo](https://www.promptfoo.dev/docs/providers/claude-agent-sdk/) - Evaluation and testing provider for Claude agents.
 - [Composio](https://composio.dev/content/claude-agents-sdk-vs-openai-agents-sdk-vs-google-adk) - Framework comparison and integration support across agent platforms.
+- [AG-UI](https://github.com/ag-ui-protocol/ag-ui/tree/main/integrations/claude-managed-agents) - `@ag-ui/claude-managed-agents` adapter that maps each AG-UI thread to one managed session and streams agent messages, thinking, and tool calls back as AG-UI events, with TypeScript, Python, and .NET versions.
 
 ## Articles and Press
 
