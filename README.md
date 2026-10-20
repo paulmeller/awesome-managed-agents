@@ -77,6 +77,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Security Risks and Sandbox Boundaries](https://platform.claude.com/docs/en/managed-agents/secure-deployment-risks) - Why an agent's settings matter for security, and what the Managed Agents sandbox can and cannot do.
 - [OpenTelemetry](https://platform.claude.com/docs/en/manage-claude/opentelemetry) - Beta OpenTelemetry export that traces Managed Agents sessions with a span for each Sessions API request and a turn span for each agent turn, set up from the Claude SDK or a Console destination.
 - [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws#claude-managed-agents) - Managed Agents on Claude Platform on AWS, including scheduled deployments, vaults, memory stores, and self-hosted sandboxes, and how sessions there differ, such as reauthenticating after 6 hours of autonomous running.
+- [Claude Platform Release Notes](https://platform.claude.com/docs/en/release-notes/overview) - Dated changelog of Claude Platform changes, including Managed Agents updates such as dynamic workflows on October 9, 2026 and OpenTelemetry export on October 14, 2026.
 
 ## Tutorials and Guides
 
@@ -115,6 +116,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [anthropics/claude-cookbooks Managed Agents](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents) - Official Anthropic notebooks, from a data analyst agent, a Slack bot, and an SRE incident responder to guided tutorials on issue-to-PR orchestration, fixing failing tests, and MongoDB Atlas.
 
 ## Community Projects
 
