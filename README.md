@@ -139,6 +139,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
 - [anthropics/claude-quickstarts Managed Agents](https://github.com/anthropics/claude-quickstarts/tree/main/managed-agents) - Official runnable apps that pair Managed Agents with real product surfaces, including assistant-ui, Chat SDK, CopilotKit over AG-UI, Slack, Linear, Sentry, and self-hosted sandboxes.
+- [duyet/oma](https://github.com/duyet/oma) - Open-source, self-hostable reimplementation of the Claude Managed Agents API that runs on Cloudflare Workers and Durable Objects or with Docker Compose. Apache 2.0.
 
 ## Integrations
 
@@ -166,6 +167,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Claude can now run swarms of up to 1,000 agents in parallel](https://crunchy-tech.com/stories/anthropic-s-claude-can-now-orchestrate-up-to-1-000-ai-agents-in-31fa5c7e) - Crunchy Tech on Managed Agents dynamic workflows, where a lead agent coordinates up to 1,000 sub-agents per run, and on their token cost.
 
 ## Videos and Talks
 
