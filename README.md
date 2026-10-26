@@ -115,6 +115,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [Review Your Agents' Sessions for Security Issues with Claude](https://platform.claude.com/cookbook/managed-agents-cma-agent-security-review) - Claude Cookbook notebook that reviews finished agent sessions in a Managed Agents dynamic workflow and returns a ranked report with quoted evidence.
 
 ## Community Projects
 
@@ -139,6 +140,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
 - [anthropics/claude-quickstarts Managed Agents](https://github.com/anthropics/claude-quickstarts/tree/main/managed-agents) - Official runnable apps that pair Managed Agents with real product surfaces, including assistant-ui, Chat SDK, CopilotKit over AG-UI, Slack, Linear, Sentry, and self-hosted sandboxes.
+- [Claude Managed Agents on Buddy Sandboxes](https://github.com/buddy/claude-managed-agents) - Self-hosted control plane that runs an orchestrator sandbox and one worker sandbox per session via `ant beta:worker run`, in webhook or polling mode.
+- [OmniRun Claude Managed Agents Worker](https://github.com/a14a-org/omnirun-claude-managed-agents-worker) - Self-hosted worker that runs Managed Agents tool calls in OmniRun Firecracker microVMs on your own infrastructure.
 
 ## Integrations
 
@@ -166,6 +169,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Claude Managed Agents Adds Dynamic Workflows for Parallel Jobs](https://bytefwd.com/claude-managed-agents-dynamic-workflows-beta/) - ByteFwd overview of the October 9, 2026 dynamic workflows beta, covering the multiagent_20261001 migration, run limits, budgets, and permissions.
 
 ## Videos and Talks
 
