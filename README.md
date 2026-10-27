@@ -21,6 +21,7 @@
 - [Engineering Deep-Dive](https://www.anthropic.com/engineering/managed-agents) - Architecture post on decoupling the brain from the hands.
 - [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) - Standard token rates plus $0.08 per session-hour metered to the millisecond.
 - [Research Preview Access Form](https://claude.com/form/claude-managed-agents) - Request access to Outcomes, Multi-agent, and Memory features.
+- [Giving Companies More Control Over Their AI Agents, With NVIDIA](https://claude.com/resources/articles/giving-companies-more-control-over-their-ai-agents-with-nvidia) - Claude article on running Managed Agents with self-hosted sandboxes and NVIDIA OpenShell as the sandbox runtime, which blocks every action unless a policy rule allows it and logs each decision.
 
 ## SDKs
 
@@ -166,6 +167,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [NVIDIA Open Agent Safety Platform](https://nvidianews.nvidia.com/news/open-agent-safety-platform) - NVIDIA newsroom announcement of its open agent safety platform, naming the Anthropic collaboration that adds NVIDIA controls to Claude Managed Agents sandboxes.
 
 ## Videos and Talks
 
