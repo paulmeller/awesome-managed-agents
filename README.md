@@ -77,6 +77,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Security Risks and Sandbox Boundaries](https://platform.claude.com/docs/en/managed-agents/secure-deployment-risks) - Why an agent's settings matter for security, and what the Managed Agents sandbox can and cannot do.
 - [OpenTelemetry](https://platform.claude.com/docs/en/manage-claude/opentelemetry) - Beta OpenTelemetry export that traces Managed Agents sessions with a span for each Sessions API request and a turn span for each agent turn, set up from the Claude SDK or a Console destination.
 - [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws#claude-managed-agents) - Managed Agents on Claude Platform on AWS, including scheduled deployments, vaults, memory stores, and self-hosted sandboxes, and how sessions there differ, such as reauthenticating after 6 hours of autonomous running.
+- [Multiagent Orchestration](https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration) - Guide to the `multiagent_20261001` block, where one agent coordinates subagents, dynamic workflows, and an advisor, each with its own isolated context.
 
 ## Tutorials and Guides
 
@@ -115,6 +116,9 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [Managed Agents Tutorial: Iterate on a Failing Test Suite](https://platform.claude.com/cookbook/managed-agents-cma-iterate-fix-failing-tests) - Official entry-point cookbook that walks through agents, environments, sessions, file mounts, and the streaming event loop by fixing planted bugs in a small package.
+- [Run Claude Managed Agents in a Sandbox](https://developers.cloudflare.com/sandbox/coding-agents/claude-managed-agents/) - Cloudflare Sandboxes guide to deploying the Workers-based control plane that gives each session its own sandbox, egress policy, browser, and email.
+- [Self-host Claude Managed Agents on Blaxel](https://docs.blaxel.ai/Tutorials/Claude-Managed-Agents) - Blaxel tutorial for self-hosting the sandbox execution layer, with an orchestrator sandbox that spawns a short-lived worker sandbox per session.
 
 ## Community Projects
 
@@ -166,6 +170,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Claude Managed Agents Dynamic Workflows: Limits to Set First](https://codedtx.com/insights/claude-managed-agents-dynamic-workflows) - CodeDTX rundown of the dynamic workflows beta, its published limits and events, and the budget, agent list, and idempotency settings to fix before turning it on.
 
 ## Videos and Talks
 
