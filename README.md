@@ -139,6 +139,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [anthropics/claude-cookbooks self-hosted sandboxes](https://github.com/anthropics/claude-cookbooks/tree/main/managed_agents/self_hosted_sandboxes) - Official Anthropic reference workers for self-hosted sandboxes on Docker, Cloudflare Containers, Cloudflare Workers, Modal, Daytona, and Vercel, authenticated with the environment key.
 - [cjavdev/managed-agents-rails](https://github.com/cjavdev/managed-agents-rails) - Rails engine that defines agents as files under `app/agents`, syncs them to the Claude API like migrations, answers custom tools in Ruby, and generates a chat UI.
 - [anthropics/claude-quickstarts Managed Agents](https://github.com/anthropics/claude-quickstarts/tree/main/managed-agents) - Official runnable apps that pair Managed Agents with real product surfaces, including assistant-ui, Chat SDK, CopilotKit over AG-UI, Slack, Linear, Sentry, and self-hosted sandboxes.
+- [omnara-ai/omnara](https://github.com/omnara-ai/omnara) - Apache-2.0 managed agent platform positioned as a self-hostable alternative to Claude Managed Agents and OpenAI's Agents API, running agents on any model with tools, secrets, permissions, and streaming built in.
 
 ## Integrations
 
