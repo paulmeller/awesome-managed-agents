@@ -115,6 +115,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [How Do Dynamic Workflows Work in Claude Managed Agents?](https://www.hardiai.com/blog/how-dynamic-workflows-work-claude-managed-agents/) - Hardi AI explainer on the `multiagent_20261001` dynamic workflows beta, where the session's agent writes a workflow that runs many agents in phases, followed through `workflow_run.*` events.
 
 ## Community Projects
 
@@ -166,6 +167,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Databricks Blog — Native OpenTelemetry in MLflow](https://www.databricks.com/blog/claude-platform-now-supports-native-opentelemetry-observability-databricks-mlflow) - November 3, 2026 Databricks post on exporting native OpenTelemetry traces from Managed Agents, the Messages API, and Anthropic SDKs into Databricks MLflow, with traces stored in Unity Catalog.
 
 ## Videos and Talks
 
