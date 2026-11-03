@@ -146,6 +146,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Promptfoo](https://www.promptfoo.dev/docs/providers/claude-agent-sdk/) - Evaluation and testing provider for Claude agents.
 - [Composio](https://composio.dev/content/claude-agents-sdk-vs-openai-agents-sdk-vs-google-adk) - Framework comparison and integration support across agent platforms.
 - [AG-UI](https://github.com/ag-ui-protocol/ag-ui/tree/main/integrations/claude-managed-agents) - `@ag-ui/claude-managed-agents` adapter that maps each AG-UI thread to one managed session and streams agent messages, thinking, and tool calls back as AG-UI events, with TypeScript, Python, and .NET versions.
+- [Precleared](https://precleared.dev/docs/claude-managed-agents) - Remote MCP server that checks whether a cold email to an address is allowed before an agent drafts it, with a ready-made agent definition.
 
 ## Articles and Press
 
