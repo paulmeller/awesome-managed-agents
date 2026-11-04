@@ -166,6 +166,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar/platforms/claude-managed-agents) - November 2026 Radar blip placing Claude Managed Agents in Assess, with notes on the credential vault, session pricing, and why it is not eligible for Zero Data Retention.
 
 ## Videos and Talks
 
