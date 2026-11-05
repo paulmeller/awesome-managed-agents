@@ -115,6 +115,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [Dreaming with a dynamic workflow](https://platform.claude.com/cookbook/managed-agents-cma-dreaming-with-a-dynamic-workflow) - Official Claude Cookbook that runs analyzer and organizer agents as a dynamic workflow over finished sessions to build a wiki-style memory store future sessions mount read-only, published November 2026.
 
 ## Community Projects
 
