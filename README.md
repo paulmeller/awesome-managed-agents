@@ -166,6 +166,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Claude Managed Agents Pricing: $0.08 an Hour, Plus Tokens](https://imisofts.com/blog/claude-managed-agents-pricing/) - Imisofts breakdown of session-hour and token billing after the October 2026 dynamic workflows beta, with a worked cost for a 500-document review.
+- [Managed Agents Compared](https://www.openlegion.ai/en/learn/managed-agents) - OpenLegion comparison of Claude Managed Agents with OpenAI, Gemini, AWS, and LangChain runtimes on status, pricing, isolation, approvals, and spend caps as of November 2026.
 
 ## Videos and Talks
 
