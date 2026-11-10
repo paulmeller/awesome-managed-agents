@@ -115,6 +115,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [How to Secure Claude Managed Agents](https://thepromptdigest.com/en/articles/secure-claude-managed-agents-network-vault-credentials-approvals-33ec332a923f) - The Prompt Digest guide built from Anthropic's three security pages, covering limited networking, vault credentials, web tool domain lists, permission policies, budgets, the stop procedure, and a pre-launch review worksheet.
 
 ## Community Projects
 
@@ -166,6 +167,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [9to5Mac — Three New Features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - Coverage of the dreaming, outcomes, and multiagent orchestration features added to Claude Managed Agents in May 2026, including Netflix's production deployment of multiagent orchestration.
 - [Cloudflare Blog](https://blog.cloudflare.com/claude-managed-agents/) - Official Cloudflare announcement of the Claude Managed Agents integration, detailing lightweight V8 isolate backends, zero-trust egress proxies, Browser Run for agent web automation, and private Mesh and Workers VPC connectivity.
 - [InfoQ — Cloudflare Integration](https://www.infoq.com/news/2026/05/cloudflare-claude-agents/) - InfoQ coverage of the Cloudflare–Anthropic integration with enterprise security perspective and the full lineup of launch-day self-hosted sandbox providers including Daytona, Modal, and Vercel.
+- [Claude Managed Agents: Who Secures What](https://www.formal.ai/blog/claude-managed-agents-security/) - Formal breakdown of what Anthropic secures and what stays with you, with quotes from the risks page, notes from five small API probes run on November 9, 2026, and session runtime pricing.
 
 ## Videos and Talks
 
@@ -181,6 +183,10 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents: Deploy AI Agents That Run for Hours](https://www.youtube.com/watch?v=DpfLbBuhHOg) - Tutorial building a complete Next.js app on Managed Agents covering all four core primitives, the Console, CLI, and SDK, plus how to assign skills, tools, and MCP servers to remote cloud agents.
 - [Claude Managed Agents is AMAZING. Here's How to Build Any Agent in 16 Minutes](https://www.youtube.com/watch?v=n1je-98lvsQ) - Practical walkthrough demonstrating the four core concepts by building a YouTube content planner agent connected to Notion, targeting business users and knowledge workers new to agent development.
 - [Build a Production-Ready Agent with Claude Managed Agents](https://www.youtube.com/watch?v=jWWsLe4Gh5Y) - Official Claude YouTube hands-on build session deploying a production-ready agent from scratch and debugging it live in the developer console, published May 2026.
+- [Decoupling the Brain from the Hands: Claude Managed Agents (Part 1 of 4)](https://ai.engineer/talks/Uv0nAf_7tyU-decoupling-brain-from-hands-claude-managed-agents) - AI Engineer World's Fair workshop by Anthropic engineers on how splitting session history, harness, and sandbox out of one container changed failure recovery and credential handling.
+- [Build a Research Agent with Claude Managed Agents (Part 2 of 4)](https://ai.engineer/talks/FGftGOzfohc-build-research-agent-claude-managed-agents-part) - Priyanka Phatak and Gabe Cemaj build from a console-created joke agent to a research desk that reads SEC filings, delegates analysis, saves memory, and grades its own work.
+- [Scheduled Agents, Dreaming and Q&A: Claude Managed Agents (Part 3 of 4)](https://ai.engineer/talks/qJtcEDc_WJU) - Company-research demo connecting session fan-out, scheduled work, and memory improvement, followed by Q&A on evaluation, observability, and tenancy.
+- [Claude Managed Agents Q&A: Evals, CI/CD and Multi-Tenancy (Part 4 of 4)](https://ai.engineer/talks/QSeaZ6qHyXs-claude-managed-agents-q-evals-ci-cd) - Q&A on versioning agent definitions, choosing workspace boundaries, evaluating real behavior, and keeping a coordinator responsive.
 
 ## Related Products
 
