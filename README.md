@@ -21,6 +21,7 @@
 - [Engineering Deep-Dive](https://www.anthropic.com/engineering/managed-agents) - Architecture post on decoupling the brain from the hands.
 - [Pricing](https://platform.claude.com/docs/en/about-claude/pricing) - Standard token rates plus $0.08 per session-hour metered to the millisecond.
 - [Research Preview Access Form](https://claude.com/form/claude-managed-agents) - Request access to Outcomes, Multi-agent, and Memory features.
+- [The Components of Agent Memory](https://www.anthropic.com/research/components-of-agent-memory) - Anthropic research post on how Claude organizes memory with dreaming, with evaluations run on Managed Agents, published November 2026.
 
 ## SDKs
 
@@ -115,6 +116,7 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [How to Use Claude Managed Agents: A Step-by-Step Setup Guide](https://www.truefoundry.com/blog/how-to-use-claude-managed-agents) - TrueFoundry walkthrough from creating an agent and environment to running a session, adding tools and MCP servers, and handling events, published October 2026.
 - [Running a Claude Managed Agent on a Schedule with Scheduled Deployments](https://www.getclaudeskills.com/blog/claude-managed-agents-scheduled-deployments) - Walkthrough of creating a scheduled deployment, per-run budgets, run history, pause and archive, and cron edge cases around daylight saving transitions.
 - [dannysullivan-ai/claude-managed-agents](https://github.com/dannysullivan-ai/claude-managed-agents) - Hands-on workshop with a 20-minute technical session, a 60-minute lab, and completed and starter versions of a team offsite planner app built on Managed Agents.
+- [Claude Managed Agents Memory: How to Audit, Restore and Redact](https://thepromptdigest.com/en/articles/claude-managed-agents-memory-audit-restore-redact-what-agent-97d2f770a6e4) - The Prompt Digest guide to memory store versions, restoring with a `content_sha256` precondition, and redaction, with a local Python script that audits a version history.
 
 ## Community Projects
 
