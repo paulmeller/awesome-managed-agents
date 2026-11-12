@@ -25,6 +25,7 @@
 - [Agent Observability on the Claude Platform](https://claude.com/resources/articles/agent-observability-on-the-claude-platform) - October 14, 2026 announcement of OpenTelemetry traces from Managed Agents, the Messages API, and the Claude SDKs to any OTel tool.
 - [Giving Companies More Control Over Their AI Agents, With NVIDIA](https://claude.com/resources/articles/giving-companies-more-control-over-their-ai-agents-with-nvidia) - Claude article on running Managed Agents with self-hosted sandboxes and NVIDIA OpenShell as the sandbox runtime, which blocks every action unless a policy rule allows it and logs each decision.
 - [The Components of Agent Memory](https://www.anthropic.com/research/components-of-agent-memory) - Anthropic research post on how Claude organizes memory with dreaming, with evaluations run on Managed Agents, published November 2026.
+- [Self-Hosted Claude Managed Agents Announcement](https://claude.com/resources/articles/self-hosted-claude-managed-agents) - Private beta announcement of running the whole Managed Agents service, including harness, sandboxes, credentials, and session history, in your own cloud or on-premise, with model requests sent to Anthropic, a cloud provider, or your own gateway.
 
 ## SDKs
 
@@ -91,6 +92,10 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Reference](https://platform.claude.com/docs/en/managed-agents/reference) - One page of event types, self-hosted worker CLI flags, supported MCP server types, rate limits, and branding guidelines.
 - [Claude Platform Release Notes](https://platform.claude.com/docs/en/release-notes/overview) - Dated changelog of Claude Platform changes, including Managed Agents updates such as dynamic workflows on October 9, 2026 and OpenTelemetry export on October 14, 2026.
 - [Multiagent Orchestration](https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration) - Guide to the `multiagent_20261001` block, where one agent coordinates subagents, dynamic workflows, and an advisor, each with its own isolated context.
+- [Self-Hosted Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/self-hosted) - Overview of hosting the Managed Agents service and its sandboxes yourself, who hosts each part compared with cloud and self-hosted sandboxes, and when to choose it.
+- [Self-Hosted Quickstart](https://platform.claude.com/docs/en/managed-agents/self-hosted/quickstart) - Start the self-hosted server, its PostgreSQL database, and sandbox workers on one machine with Docker Compose and run a first session in a sandbox container.
+- [Differences from the Hosted Service](https://platform.claude.com/docs/en/managed-agents/self-hosted/differences) - Which features only a self-hosted server has, such as a choice of inference provider and single sign-on, which hosted features are missing, and which behave differently.
+- [Deploy Self-Hosted Managed Agents on Kubernetes](https://platform.claude.com/docs/en/managed-agents/self-hosted/kubernetes) - Install the self-hosted server and its sandboxes on a GKE cluster with the two Helm charts in the release archive, then run a first session in a sandbox pod.
 
 ## Tutorials and Guides
 
@@ -214,6 +219,8 @@ All SDKs expose Managed Agents under `client.beta.agents`, `client.beta.environm
 - [Claude Managed Agents Pricing: $0.08 an Hour, Plus Tokens](https://imisofts.com/blog/claude-managed-agents-pricing/) - Imisofts breakdown of session-hour and token billing after the October 2026 dynamic workflows beta, with a worked cost for a 500-document review.
 - [Managed Agents Compared](https://www.openlegion.ai/en/learn/managed-agents) - OpenLegion comparison of Claude Managed Agents with OpenAI, Gemini, AWS, and LangChain runtimes on status, pricing, isolation, approvals, and spend caps as of November 2026.
 - [Claude Managed Agents: Who Secures What](https://www.formal.ai/blog/claude-managed-agents-security/) - Formal breakdown of what Anthropic secures and what stays with you, with quotes from the risks page, notes from five small API probes run on November 9, 2026, and session runtime pricing.
+- [Self-Hosted Claude Managed Agents Keeps Agent Credentials in Your Environment](https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/) - Help Net Security on the November 12, 2026 private beta, what the customer operates, and the four security principles behind Managed Agents.
+- [Anthropic Lets Customers Self-Host Claude Managed Agents](https://www.unite.ai/anthropic-lets-customers-self-host-claude-managed-agents/) - Unite.AI on the self-hosted server architecture, inference provider choices, the PostgreSQL 16 requirement, and hosted features such as scheduled deployments, dreams, and webhooks that are unavailable.
 
 ## Videos and Talks
 
